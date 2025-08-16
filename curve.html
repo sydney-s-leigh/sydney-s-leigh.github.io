@@ -1,0 +1,207 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Damped Letter Playground</title>
+    <style>
+        body {
+            background: #111;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /*
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background: #222;
+        }*/
+    </style>
+</head>
+
+<body>
+    <div id="main" style="margin-top:250px; width:50%; margin-right:auto; margin-left: auto; border: 0px solid black;">
+        <canvas id="myCanvas"
+            style="width:100%; display:block; margin-right:auto; margin-left: auto; border: 0px solid red;">Your
+            browser
+            doesn't support Canvas.</canvas>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const phrase = "Stupendous!";
+        const letters = [];
+        const totalDuration = 10000; // ms
+        const finalHoldDuration = 5000; // ms to hold final text
+        const finalColor = "hsl(0, 100%, 50%)"; // target color to hue shift to
+
+        let animationPhase = "bouncing"; // 'bouncing' → 'final'
+        let startTime = performance.now();
+
+        function randomRange(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        function hslToRgb(h, s, l) {
+            h /= 360;
+            s /= 100;
+            l /= 100;
+            let r, g, b;
+            if (s === 0) r = g = b = l;
+            else {
+                const hue2rgb = (p, q, t) => {
+                    if (t < 0) t += 1;
+                    if (t > 1) t -= 1;
+                    if (t < 1 / 6) return p + (q - p) * 6 * t;
+                    if (t < 1 / 2) return q;
+                    if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+                    return p;
+                };
+                const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+                const p = 2 * l - q;
+                r = hue2rgb(p, q, h + 1 / 3);
+                g = hue2rgb(p, q, h);
+                b = hue2rgb(p, q, h - 1 / 3);
+            }
+            return `rgb(${Math.round(r*255)}, ${Math.round(g*255)}, ${Math.round(b*255)})`;
+        }
+
+        function parseHSL(hsl) {
+            const match = /hsl\((\d+),\s*([\d.]+)%,\s*([\d.]+)%\)/.exec(hsl);
+            if (!match) return [0, 100, 50];
+            return [parseFloat(match[1]), parseFloat(match[2]), parseFloat(match[3])];
+        }
+
+        function interpolateHue(h1, h2, t) {
+            const delta = ((((h2 - h1) % 360) + 540) % 360) - 180;
+            return (h1 + delta * t + 360) % 360;
+        }
+
+        function resetLetters() {
+            letters.length = 0;
+            for (let i = 0; i < phrase.length; i++) {
+                const direction = Math.random() < 0.5 ? 1 : -1;
+                const A = randomRange(50, 150);
+                const k = randomRange(0.01, 0.025);
+                const w = randomRange(0.025, 0.075);
+                const speed = randomRange(0.5, 1.5);
+                const fontSize = randomRange(8, 24);
+                const hue = Math.floor(Math.random() * 360);
+                const color = `hsl(${hue}, 100%, 50%)`;
+                const rotation = randomRange(-Math.PI / 4, Math.PI / 4);
+                const clockwise = Math.random() < 0.5 ? -1 : 1;
+                letters.push({
+                    char: phrase[i],
+                    direction,
+                    A,
+                    k,
+                    w,
+                    x: direction === 1 ? 0 : canvas.width,
+                    speed,
+                    fontSize,
+                    color,
+                    targetColor: finalColor,
+                    hue,
+                    targetHue: parseHSL(finalColor)[0],
+                    rotation,
+                    targetRotation: 0,
+                    clockwise,
+                });
+            }
+        }
+
+        function dampedY(x, A, k, w) {
+            return Math.abs(A * Math.exp(-k * x) * Math.cos(w * x));
+        }
+
+        function drawBouncingPhase() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            let allDone = true;
+
+            for (let l of letters) {
+                const x = l.x;
+                const y = canvas.height - dampedY(x, l.A, l.k, l.w);
+                ctx.save();
+                ctx.translate(x, y);
+                ctx.rotate(l.rotation);
+                ctx.fillStyle = l.color;
+                ctx.font = `${l.fontSize}px sans-serif`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(l.char, 0, 0);
+                ctx.restore();
+
+                l.x += l.speed * l.direction;
+                l.rotation += 0.005 * l.clockwise;
+
+                if ((l.direction === 1 && l.x < canvas.width) || (l.direction === -1 && l.x > 0)) {
+                    allDone = false;
+                }
+            }
+
+            if (allDone) {
+                animationPhase = "final";
+                startTime = performance.now();
+            }
+        }
+
+        function drawFinalPhase() {
+            const elapsed = performance.now() - startTime;
+            const t = Math.min(1, elapsed / 1); // interpolate in 1 second
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const totalTextWidth = letters.reduce((sum, l) => {
+                ctx.font = `24px sans-serif`;
+                return sum + ctx.measureText(l.char).width;
+            }, 0);
+            let startX = (canvas.width - totalTextWidth) / 2;
+
+            for (let l of letters) {
+                // Interpolate rotation
+                l.rotation = l.rotation + (l.targetRotation - l.rotation) * 0.05;
+
+                // Interpolate hue
+                l.hue = interpolateHue(l.hue, l.targetHue, 0.05);
+                l.color = hslToRgb(l.hue, 100, 50);
+
+                ctx.save();
+                ctx.translate(startX, canvas.height / 2);
+                ctx.rotate(l.rotation);
+                ctx.fillStyle = l.color;
+                ctx.font = `24px sans-serif`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(l.char, 0, 0);
+                ctx.restore();
+
+                const charWidth = ctx.measureText(l.char).width;
+                startX += charWidth;
+            }
+
+            if (elapsed > finalHoldDuration) {
+                resetLetters();
+                animationPhase = "bouncing";
+                startTime = performance.now();
+            }
+        }
+
+        function animate() {
+            if (animationPhase === "bouncing") {
+                drawBouncingPhase();
+            } else if (animationPhase === "final") {
+                drawFinalPhase();
+            }
+            requestAnimationFrame(animate);
+        }
+
+        resetLetters();
+        animate();
+    </script>
+</body>
+
+</html>

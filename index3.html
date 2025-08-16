@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+
+<body>
+    <div id="main" style="width:50%; margin-right:auto; margin-left: auto; border: 1px solid black;">
+        <canvas id="myCanvas" style="display:block; margin-right:auto; margin-left: auto; border: 1px solid red;">Your browser
+            doesn't support Canvas.</canvas>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let x = 0;
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+            ctx.font = '30px Arial';
+            ctx.fillStyle = 'red';
+            ctx.fillText('Hello, Canvas!', x, 100); // Draw text
+
+            x += 2; // Move text to the right
+
+            if (x > canvas.width) {
+                x = -200; // Reset text when it goes off screen
+            }
+
+            requestAnimationFrame(animate); // Schedule next frame
+        }
+
+        animate(); // Start animation
+    </script>
+</body>
+
+</html>

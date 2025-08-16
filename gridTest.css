@@ -1,0 +1,62 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    margin:0;
+    padding:0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: aqua;
+}
+
+.feature-yellow {
+    grid-area: fYellow;
+    background-color: yellow;
+}
+.feature-purple {
+    grid-area: fPurple;
+    background-color: purple;
+}
+.feature-red {
+    grid-area: fRed;
+    background-color: red;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+}
+.sign-up {
+    grid-area: signUp;
+    background-color: orange;
+}
+
+.content{
+    grid-area: content;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: 200px 250px 150px 1fr; */
+    grid-template-rows: repeat(3, 1fr) 1fr;
+    grid-template-areas: 
+    "header header header"
+    "fYellow fPurple fRed"
+    "signUp signUp signUp"
+    "content content content"
+    ;
+    min-height: 100vh;
+}
+
+.redContent {
+    border:1px solid green;
+}

@@ -1,0 +1,280 @@
+@media only screen and (min-width:600px) {
+    :root {
+        --asideLeftWidth: 10vw;
+        --asideRightWidth: 5vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --asideLeftWidth: 0vw;
+        --asideRightWidth: 0vw;
+    }
+}
+
+/* This fixes the elements of the page so that their borders don't get pushed off the page 
+    see https://www.w3schools.com/css/css3_box-sizing.asp for details.
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.gridLayout {
+    display: grid;
+    /*grid-template-areas:
+        "header header header"
+        "aside nav main"
+        "footer footer footer";*/
+    grid-template-columns: var(--asideRightWidth) 50px 50px 1fr 1fr var(--asideLeftWidth);
+    grid-template-rows: auto 1fr 1fr 1fr 1fr auto;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/*
+.gridLayout>#opener {
+    background-color:black;
+    color: transparent;
+    grid-area: 1, 1, 7, 7;
+    animation: openerAnimation 5s 1;
+    z-index: 2;
+}
+
+#opener>h1 {
+    font-size:48px;
+} 
+
+@keyframes openerAnimation {
+    0% {
+        background: linear-gradient(top, rgba(0, 0, 0), rgba(0, 0, 0));
+        color: rgba(255, 255, 255);
+    }
+
+    50% {
+        background: linear-gradient(top, rgba(0, 0, 0), rgba(0, 0, 0, 0));
+        color: rgba(255, 255, 255, 0.50);
+    }
+
+    100% {
+        background: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+        color: rgba(255, 255, 255, 0);;
+    }
+} */
+
+body {
+    /* background-color: black;
+    background-image: url("stars.jpg"); */
+    background-color: rgb(237,236,203);
+    background-image: linear-gradient(#00ccff 0% 10%, rgb(237,236,203) 65% 100%);
+    color: white;
+    min-height: 100%;
+}
+
+.gridLayout {
+    /* This makes the layout fit the whole page, but I may not want to do this */
+    min-height: 100vh;
+}
+
+.gridLayout>header {
+    /* grid-area: header; */
+    grid-area: 1 / 1 / 2 / 7;
+    height: 150px;
+    /* border-bottom: 3px solid aqua; */
+    border-bottom: 5px solid aqua;
+    /* justify-items: center;
+    align-items: center; */
+    border-radius: 0px 0px 15px 15px;
+}
+
+.header>div {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    /* border:5px solid red; */
+}
+
+.gridLayout>footer {
+    /* grid-area: footer; */
+    height: 150px;
+    grid-area: 6 / 1 / 7 / 7;
+    border-top: 5px solid aqua;
+}
+
+.footer>div {
+    display:flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.asideLeft {
+    /* grid-row start / grid column start / grid row end / grid column end */
+    grid-area: 2 / 1 / 6 / 3;
+    /* border: 5px solid green; */
+    border: 1px solid red;
+
+}
+
+.asideRight {
+    grid-area: 2 / 6 / 6 / 7;
+    /* border: 5px solid green; */
+    border: 1px solid red;
+}
+
+.gridLayout>nav {
+    /* grid-area: nav; */
+    background: rgba(0, 191, 255, 0.637);
+    grid-area: 2 / 2 / 5 / 4;
+    /*background-color: black;*/
+    border-left: 5px solid aqua;
+    border-bottom: 5px solid aqua;
+    z-index: 1;
+    /* border-radius: 0px 0px 0px 15px; */
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+.gridLayout>main {
+    /* grid-area: main; */
+    grid-area: 2 / 4 / 6 / 6;
+    border-left: 5px solid aqua;
+}
+
+.main>article{
+    background: rgba(0, 191, 255, 0.637);
+    width:65vw;
+    color:white;
+    padding:10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 5px solid aqua;
+    border-radius: 15px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu>div {
+    background-color: green;
+    margin: 2px;
+    padding: 5px;
+    border: 5px inset yellow;
+    border-radius: 0px 0px 15px 0px;
+}
+
+#headerHeading {
+    /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
+    font-size: 64px;
+    animation: headerHeadingAnimation 2s infinite alternate;
+    /* background: linear-gradient(to right, #ff00cc, #3333ff); */
+    background-clip: text;
+    color: transparent;
+}
+
+@keyframes headerHeadingAnimation {
+    0% {
+        /* text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit; */
+        /* color: rgb(255, 255, 255); */
+        background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0),
+                rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0));
+        background-clip: text;
+        /* text-shadow: 0 0 0 rgba(255, 0, 0, 0); */
+    }
+
+    10% {
+        /* text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit; */
+        /* color: rgb(255, 255, 255); */
+        background: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(255, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0),
+                rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0));
+        background-clip: text;
+        /* text-shadow: 0 0 0 rgba(255, 0, 0, 0); */
+    }
+
+    20% {
+        /* text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit; */
+        /* color: rgb(255, 255, 255); */
+        background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgb(255, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0),
+                rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0));
+        background-clip: text;
+        /* text-shadow: 0 0 0 rgba(255, 0, 0, 0); */
+    }
+
+    30% {
+        /* text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit; */
+        /* color: rgb(255, 255, 255); */
+        background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgb(255, 0, 0), rgba(255, 0, 0, 0),
+                rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0));
+        background-clip: text;
+        /* text-shadow: 0 0 0 rgba(255, 0, 0, 0); */
+    }
+
+    40% {
+        /* text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit; */
+        /* color: rgb(255, 255, 255); */
+        background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgb(255, 0, 0),
+                rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0));
+        background-clip: text;
+        /* text-shadow: 0 0 0 rgba(255, 0, 0, 0); */
+    }
+
+    50% {
+        /* text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit; */
+        /* color: rgb(255, 255, 255); */
+        background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0),
+                rgb(255, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0));
+        background-clip: text;
+        /* text-shadow: 0 0 0 rgba(255, 0, 0, 0); */
+    }
+
+    60% {
+        /* text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit; */
+        /* color: rgb(255, 255, 255); */
+        background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0),
+                rgba(255, 0, 0, 0), rgb(255, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0));
+        background-clip: text;
+        /* text-shadow: 0 0 0 rgba(255, 0, 0, 0); */
+    }
+
+    70% {
+        /* text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit; */
+        /* color: rgb(255, 255, 255); */
+        background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0),
+                rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgb(255, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0));
+        background-clip: text;
+        /* text-shadow: 0 0 0 rgba(255, 0, 0, 0); */
+    }
+
+    80% {
+        /* text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit; */
+        /* color: rgb(255, 255, 255); */
+        background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0),
+                rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgb(255, 0, 0), rgba(255, 0, 0, 0));
+        background-clip: text;
+        /* text-shadow: 0 0 0 rgba(255, 0, 0, 0); */
+    }
+
+    90% {
+        /* text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit; */
+        /* color: rgb(255, 255, 255); */
+        background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0),
+                rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgb(255, 0, 0));
+        background-clip: text;
+        /* text-shadow: 0 0 0 rgba(255, 0, 0, 0); */
+    }
+
+    100% {
+        /* color: rgba(255, 255, 255, 0.5); */
+        /* text-shadow: 3px 3px 5px rgb(0, 255, 255); */
+        background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 0, 0), rgb(255, 0, 0), rgb(255, 0, 0), rgb(255, 0, 0),
+                rgb(255, 0, 0), rgb(255, 0, 0), rgb(255, 0, 0), rgb(255, 0, 0), rgb(255, 0, 0));
+        background-clip: text;
+    }
+}

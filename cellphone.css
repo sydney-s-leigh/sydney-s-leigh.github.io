@@ -1,0 +1,242 @@
+/********************* START GLOBALS ****************************/
+@font-face {
+    font-family: 'CedarvilleCursive'; /* Choose a unique name for your font */
+    src: url('/fonts/CedarvilleCursive-Regular.ttf') format('truetype'); /* Specify the path to your TTF file and its format */
+    font-weight: normal; /* Optional: Define font weight if applicable */
+    font-style: normal; /* Optional: Define font style if applicable */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color: #e7e4e4; 
+    color: #061919;
+    font: 16px Calibri, serif;
+} 
+/*********************** END GLOBALS ****************************/
+
+/*********************** START LINKS ****************************/
+a:link {
+    color: #E0E2EB;
+    text-decoration: none;
+}
+
+a:active {
+    color: #9a9898;
+}
+
+a:visited {
+    color: #E0E2EB;
+}   
+
+a:hover {
+    color: #9a9898;
+}
+
+/* https://www.svgrepo.com/collection/social-media-fill-icons/ */
+svg {
+    height: 32px;
+    width: 32px;
+    fill: #E0E2EB;
+}
+
+svg:hover {
+    fill: #9a9898;
+}
+/************************** END LINKS ****************************/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;    
+}
+
+header{
+    display:flex;
+    justify-content: end;
+    align-items: center;
+    background-color: #7d84a2;
+    height:3rem;
+    padding-right:1rem;
+}
+
+nav {
+    background-color: #636A88;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height:5rem;
+}
+
+.banner {
+    padding:0.25rem;
+
+    background-color: #7d84a2;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerBox{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.bannerBox1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerBox3{
+    display:flex;
+    flex-direction: column;
+  
+    border: 1px solid red;
+    justify-content: center;
+    align-items:center;
+}
+
+.portraitCutout {
+    border: 1px solid #7d84a2;
+    overflow: hidden;
+    box-shadow: #636A88 0 0 0 3px;
+    border-radius:50%;
+}
+
+
+.callOrBook {
+    border: 1px solid red;
+}
+
+.bookButton {
+    padding: 15px;
+    color: #061919;
+    border: 5px dotted rgba(255, 238, 0, 0.75);
+    background-color: #de0808;
+    border-radius: 20px 20px 20px 20px;
+    font: bold 30px Georgia, serif;
+}
+
+.bookButton:active {
+    background-color: #7a0606;
+}
+
+.main {
+
+}
+
+.footer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:5rem;        
+
+    width:100vw;
+    
+    background-color: #7d84a2;
+}
+
+/* For phones in portrait mode */
+@media only screen and (max-width:600px) {
+    nav {
+            font: bold 1em Georgia, serif;
+    }
+
+    .bookButtonBoxPC{
+        display: none;
+    }
+    
+    .banner{
+        flex-direction: column;
+    }
+
+    .bannerBox1{
+        order:3;
+    }
+
+    .bannerBox2{
+        order:1;
+    }
+
+    .bannerBox3{
+        order:2;
+    }
+
+    .bannerBox {
+        height: 20rem;
+        width: 20rem;
+    }
+    
+    .portrait {
+        height:20rem;
+        width:20rem;
+    }
+} 
+
+/* Specifically for phones in lanscape mode */
+@media only screen and (min-width:600px) and (max-height:600px) {
+    nav {
+            font: bold 1.5em Georgia, serif;
+    }
+
+    .bookButtonBoxPhone{
+        display: none;
+    }
+
+    .bannerBox {
+        height: 14rem;
+        width: 14rem;
+    }
+
+    .portrait {
+        height:14rem;
+        width:14rem;
+    }
+}
+
+/* For computer and tablet screens */
+@media only screen and (min-width:600px) and (min-height:600px){
+    nav {
+            font: bold 1.5em Georgia, serif;
+    }
+
+    .bookButtonBoxPhone{
+        display: none;
+    }
+
+    .portrait {
+        height:15rem;
+        width:15rem;
+    }
+
+    .bannerBox {
+        height: 15rem;
+        width: 15rem;
+    }
+
+    /* header{
+        position:sticky;
+        top:0;
+    }
+
+    nav {
+        position:sticky;
+        top:3rem;
+    } */
+
+/* 
+    .footer{
+        position:fixed;
+        bottom:0;
+    } */
+}
