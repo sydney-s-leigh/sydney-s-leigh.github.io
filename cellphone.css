@@ -121,6 +121,15 @@ nav {
     border-radius:50%;
 }
 
+.portrait {
+    background-image: url("Sydney\ Business\ 2025\ 8bit.jpg");
+    background-size: cover;
+}
+
+.portrait:hover {
+    background-image: url("Sydney\ Business\ 2025.jpg");
+    background-size: cover;
+}
 
 .callOrBook {
     border: 1px solid red;
@@ -148,7 +157,7 @@ nav {
     justify-content: center;
     align-items: center;
     height:5rem;        
-
+    
     width:100vw;
     
     background-color: #555555;
@@ -157,7 +166,8 @@ nav {
 /* For phones in portrait mode */
 @media only screen and (max-width:600px) {
     nav {
-            font: bold 1em Georgia, serif;
+            font-size: 1.5em;
+            font-style: bold;
     }
 
     .bookButtonBoxPC{
@@ -189,12 +199,17 @@ nav {
         height:20rem;
         width:20rem;
     }
+
+    .footer{
+        font-size: 1.5em;
+    }
 } 
 
 /* Specifically for phones in lanscape mode */
 @media only screen and (min-width:600px) and (max-height:600px) {
     nav {
-            font: bold 1.5em Georgia, serif;
+            font-size: 1.5em;
+            font-style: bold;
     }
 
     .bookButtonBoxPhone{
@@ -210,12 +225,17 @@ nav {
         height:14rem;
         width:14rem;
     }
+
+    .footer{
+        font-size: 2.5em;
+    }
 }
 
 /* For computer and tablet screens */
 @media only screen and (min-width:600px) and (min-height:600px){
     nav {
-            font: bold 1.5em Georgia, serif;
+            font-size: 3em;
+            font-style: bold;
     }
 
     .bookButtonBoxPhone{
@@ -230,6 +250,10 @@ nav {
     .bannerBox {
         height: 15rem;
         width: 15rem;
+    }
+
+    .footer{
+        font-size: 2.5em;
     }
 
     /* header{
