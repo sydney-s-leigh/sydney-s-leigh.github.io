@@ -6,6 +6,14 @@
     font-style: normal; /* Optional: Define font style if applicable */
 }
 
+@font-face {
+    font-family: 'PerfectDOS_VGA'; /* Choose a name for your font */
+    src: url('/sydney-s-leigh.github.io/fonts/PERFECT_DOS_VGA_437_WIN.TTF') format('truetype'); /* Path to your font file */
+    font-weight: normal; /* Define font weight if applicable */
+    font-style: normal;  /* Define font style if applicable */
+    font-display: swap;  /* Optimize font loading */
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,9 +26,9 @@ body {
 }
 
 body {
-    background-color: #e7e4e4; 
-    color: #061919;
-    font: 16px Calibri, serif;
+    background-color: #101010; 
+    color: #efefef;
+    font: 16px 'PerfectDOS_VGA', serif;
 } 
 /*********************** END GLOBALS ****************************/
 
@@ -64,13 +72,13 @@ header{
     display:flex;
     justify-content: end;
     align-items: center;
-    background-color: #7d84a2;
+    background-color: #555555;
     height:3rem;
     padding-right:1rem;
 }
 
 nav {
-    background-color: #636A88;
+    background-color: #757575;
     display:flex;
     justify-content: space-evenly;
     align-items: center;
@@ -80,7 +88,7 @@ nav {
 .banner {
     padding:0.25rem;
 
-    background-color: #7d84a2;
+    background-color: #555555;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -107,9 +115,9 @@ nav {
 }
 
 .portraitCutout {
-    border: 1px solid #7d84a2;
+    border: 1px solid #656565;
     overflow: hidden;
-    box-shadow: #636A88 0 0 0 3px;
+    box-shadow: #656565 0 0 0 3px;
     border-radius:50%;
 }
 
@@ -143,7 +151,7 @@ nav {
 
     width:100vw;
     
-    background-color: #7d84a2;
+    background-color: #555555;
 }
 
 /* For phones in portrait mode */
