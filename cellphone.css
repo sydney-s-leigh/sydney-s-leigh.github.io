@@ -96,21 +96,24 @@ nav {
 
 .gridBoxLeft {
     display:grid;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin:0px;
     width:100%;
     height:100%;
 }
 
 .gridBox{
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bannerBox{
     /* margin-left: 1rem;
     margin-right: 1rem; */
     flex-grow: 1;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 .bannerBox1{
@@ -120,7 +123,7 @@ nav {
 
     flex-grow:25;
 
-    border:1px solid green;
+    /* border:1px solid green; */
 }
 
 .bannerBox3{
