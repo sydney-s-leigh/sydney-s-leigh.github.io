@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created using Krita: https://krita.org -->
+<svg xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:krita="http://krita.org/namespaces/svg/krita"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    width="96.72pt"
+    height="109.68pt"
+    viewBox="0 0 96.72 109.68">
+<defs/>
+<g id="group0" transform="matrix(0.333301509800413 0 0 0.333267931590457 -0.0461252286825984 -0.0115913992114978)" fill="none">
+  <path id="polygon2989" transform="matrix(0.800001390533812 0 0 0.800001390533812 0 0)" fill="#264de4" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M362.734 0L329.688 370.199L181.145 411.38L33.011 370.257L0 0Z" sodipodi:nodetypes="cccccc"/>
+  <path id="polygon2991" transform="matrix(0.800001390533812 0 0 0.800001390533812 145.093852196946 24.2192420970206)" fill="#2965f1" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M120.03 316.352L148.27 0L0 0L0 349.629Z" sodipodi:nodetypes="ccccc"/>
+  <path id="polygon2993" transform="matrix(0.800001390533812 0 0 0.800001390533812 60.5417052314273 134.077833049295)" fill="#ebebeb" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M0 0L4.07 45.41L105.69 45.41L105.69 0Z" sodipodi:nodetypes="ccccc"/>
+  <path id="polygon2995" transform="matrix(0.800001390533812 0 0 0.800001390533812 53.9992938596418 60.5481052425515)" fill="#ebebeb" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M113.868 0L113.711 0L0 0L4.128 45.411L113.868 45.411Z" sodipodi:nodetypes="cccccc"/>
+  <path id="polygon2997" transform="matrix(0.800001390533812 0 0 0.800001390533812 65.420913712293 188.570727766896)" fill="#ebebeb" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M99.591 97.066L99.591 49.82L99.392 49.873L48.818 36.217L45.585 0L21.01 0L0 0L6.362 71.301L99.382 97.124Z" sodipodi:nodetypes="cccccccccc"/>
+  <path id="polygon3005" transform="matrix(0.800001390533812 0 0 0.800001390533812 144.968251978632 60.5481052425515)" fill="#ffffff" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" d="M55.918 137.322L50.647 196.216L0 209.886L0 257.13L93.094 231.329L93.777 223.657L104.448 104.106L105.556 91.912L113.754 0L0 0L0 45.411L63.988 45.411L59.856 91.912L0 91.912L0 137.322Z" sodipodi:nodetypes="cccccccccccccccc"/>
+ </g>
+</svg>
