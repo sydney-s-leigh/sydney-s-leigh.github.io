@@ -34,31 +34,31 @@ body {
 
 /*********************** START LINKS ****************************/
 a:link {
-    color: #E0E2EB;
+    color: #efefef;
     text-decoration: none;
 }
 
 a:active {
-    color: #9a9898;
+    color: #cacaca;
 }
 
 a:visited {
-    color: #E0E2EB;
+    color: #efefef;
 }   
 
 a:hover {
-    color: #9a9898;
+    color: #cacaca;
 }
 
 /* https://www.svgrepo.com/collection/social-media-fill-icons/ */
 svg {
     height: 32px;
     width: 32px;
-    fill: #E0E2EB;
+    fill: #efefef;
 }
 
 svg:hover {
-    fill: #9a9898;
+    fill: #cacaca;
 }
 /************************** END LINKS ****************************/
 
@@ -90,25 +90,43 @@ nav {
 
     background-color: #555555;
     display:flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
+.gridboxLeft {
+    display:grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid red;
+    margin:0px;
+    width:100%;
+    height:100%;
+}
+
 .bannerBox{
-    margin-left: 1rem;
-    margin-right: 1rem;
+    /* margin-left: 1rem;
+    margin-right: 1rem; */
+    flex-grow: 1;
+    border: 1px solid green;
 }
 
 .bannerBox1{
     display:flex;
     justify-content: center;
     align-items: center;
+
+    flex-grow:25;
+
+    border:1px solid green;
 }
 
 .bannerBox3{
     display:flex;
     flex-direction: column;
-  
+
+    flex-grow: 25;
+
     border: 1px solid red;
     justify-content: center;
     align-items:center;
@@ -122,12 +140,12 @@ nav {
 }
 
 .portrait {
-    background-image: url("Sydney\ Business\ 2025\ 8bit.jpg");
+    background-image: url("/sydney-s-leigh.github.io/images/Sydney\ Business\ 2025\ 8bit.jpg");
     background-size: cover;
 }
 
 .portrait:hover {
-    background-image: url("Sydney\ Business\ 2025.jpg");
+    background-image: url("/sydney-s-leigh.github.io/images/Sydney\ Business\ 2025.jpg");
     background-size: cover;
 }
 
@@ -166,7 +184,7 @@ nav {
 /* For phones in portrait mode */
 @media only screen and (max-width:600px) {
     nav {
-            font-size: 1.5em;
+            font-size: 1em;
             font-style: bold;
     }
 
@@ -234,7 +252,7 @@ nav {
 /* For computer and tablet screens */
 @media only screen and (min-width:600px) and (min-height:600px){
     nav {
-            font-size: 3em;
+            font-size: 2.5em;
             font-style: bold;
     }
 

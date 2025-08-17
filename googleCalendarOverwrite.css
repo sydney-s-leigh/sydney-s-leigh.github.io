@@ -5,7 +5,8 @@
     border: 5px dotted rgba(255, 238, 0, 0.75);
     background-color: #41ff00;
     border-radius: 20px 20px 20px 20px;
-    font: bold 30px Georgia, serif;
+    /* font: bold 30px Georgia, serif; */
+    font: bold 30px 'PerfectDOS_VGA', serif;
 /*     
     min-height: 36px;
     padding: 8px 16px;
