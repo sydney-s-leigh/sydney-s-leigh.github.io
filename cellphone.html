@@ -6,12 +6,10 @@
     <title>Sydney Leigh's Website</title>
     <link rel="stylesheet" href="cellphone.css">
     <link href="googleCalendarOverwrite.css" rel="stylesheet">
-    <style>
-
-    </style>
+    <script src="scripts/populateIcons.js"></script>
 </head>
 
-<body>
+<body onload="populateGridBox()">
     <div class="container">
         <header class="header">
             <div class="socialmedia">
@@ -127,7 +125,7 @@
         </nav>        
         <div class="banner">
             <div class="bannerBox bannerBox1">
-                <div class="gridboxLeft">Some content</div>
+                <div id="gridBoxLeft" class="gridboxLeft">S</div>
                 <!-- <img src="/sydney-s-leigh.github.io/images/svgs/C_Sharp_Logo_2023.svg"
                     height="75px"
                     widht="75px"

@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'PerfectDOS_VGA'; /* Choose a name for your font */
-    src: url('/sydney-s-leigh.github.io/fonts/PERFECT_DOS_VGA_437_WIN.TTF') format('truetype'); /* Path to your font file */
+    src: url('/fonts/PERFECT_DOS_VGA_437_WIN.TTF') format('truetype'); /* Path to your font file */
     font-weight: normal; /* Define font weight if applicable */
     font-style: normal;  /* Define font style if applicable */
     font-display: swap;  /* Optimize font loading */
@@ -96,8 +96,6 @@ nav {
 
 .gridboxLeft {
     display:grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
     border: 1px solid red;
     margin:0px;
     width:100%;
@@ -140,12 +138,12 @@ nav {
 }
 
 .portrait {
-    background-image: url("/sydney-s-leigh.github.io/images/Sydney\ Business\ 2025\ 8bit.jpg");
+    background-image: url("/images/Sydney\ Business\ 2025\ 8bit.jpg");
     background-size: cover;
 }
 
 .portrait:hover {
-    background-image: url("/sydney-s-leigh.github.io/images/Sydney\ Business\ 2025.jpg");
+    background-image: url("/images/Sydney\ Business\ 2025.jpg");
     background-size: cover;
 }
 
@@ -184,8 +182,13 @@ nav {
 /* For phones in portrait mode */
 @media only screen and (max-width:600px) {
     nav {
-            font-size: 1em;
-            font-style: bold;
+        font-size: 1em;
+        font-style: bold;
+    }
+
+    .gridboxLeft{
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .bookButtonBoxPC{
@@ -223,11 +226,16 @@ nav {
     }
 } 
 
-/* Specifically for phones in lanscape mode */
+/* Specifically for phones & tablets in lanscape mode */
 @media only screen and (min-width:600px) and (max-height:600px) {
     nav {
-            font-size: 1.5em;
-            font-style: bold;
+        font-size: 1.5em;
+        font-style: bold;
+    }
+
+    .gridboxLeft{
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .bookButtonBoxPhone{
@@ -252,8 +260,13 @@ nav {
 /* For computer and tablet screens */
 @media only screen and (min-width:600px) and (min-height:600px){
     nav {
-            font-size: 2.5em;
-            font-style: bold;
+        font-size: 2.5em;
+        font-style: bold;
+    }
+
+    .gridboxLeft{
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(10, 1fr);
     }
 
     .bookButtonBoxPhone{
@@ -273,20 +286,4 @@ nav {
     .footer{
         font-size: 2.5em;
     }
-
-    /* header{
-        position:sticky;
-        top:0;
-    }
-
-    nav {
-        position:sticky;
-        top:3rem;
-    } */
-
-/* 
-    .footer{
-        position:fixed;
-        bottom:0;
-    } */
 }
