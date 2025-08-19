@@ -138,15 +138,15 @@ nav {
 }
 
 .portraitCutout {
-    border: 1px solid #656565;
+    border: 3px solid #cacaca;
     overflow: hidden;
-    box-shadow: #656565 0 0 0 3px;
+    /* box-shadow: #656565 0 0 0 3px; */
     border-radius:50%;
 }
 
 .portrait {
     background-image: url("/images/Sydney\ Business\ 2025.jpg");
-    background-size: cover;
+    background-size: contain;
     filter:grayscale(35%);
 }
 
