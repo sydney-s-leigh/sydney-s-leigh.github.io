@@ -61,6 +61,9 @@ function populateGridBox(){
         alert("Error trying to load banner background images.");
     } else {
         let imageCounter = 0;
+        
+        //Variable to start on cell 1 or cell 2
+        const evenOrOdd = Math.floor(Math.random() * 2);
 
         for (let i = 0; i < divBoxes; i++) {
             const div = document.createElement("div");
@@ -68,7 +71,9 @@ function populateGridBox(){
 
             // Determine which block we're in
             const block = Math.floor(i / rowSize);
-            const evenOrOddTest = (i % 2 === 0);
+            let evenOrOddTest = 1;
+
+            evenOrOddTest = evenOrOdd ? (i % 2 === 0) : (i % 2 !== 0);
 
             // For even blocks (0, 2, 4...), even index = "Image", odd = "Div"
             // For odd blocks (1, 3, ...), even index = "Div", odd = "Image"
