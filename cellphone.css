@@ -94,7 +94,7 @@ nav {
     align-items: center;
 }
 
-.gridBoxLeft {
+.gridBoxIcons {
     display:grid;
     /* border: 1px solid red; */
     margin:0px;
@@ -132,7 +132,7 @@ nav {
 
     flex-grow: 25;
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
     justify-content: center;
     align-items:center;
 }
@@ -189,7 +189,7 @@ nav {
         font-style: bold;
     }
 
-    .gridBoxLeft{
+    .gridBoxIcons{
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(3, 1fr);
     }
@@ -236,7 +236,7 @@ nav {
         font-style: bold;
     }
 
-    .gridBoxLeft{
+    .gridBoxIcons{
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(3, 1fr);
     }
@@ -267,7 +267,7 @@ nav {
         font-style: bold;
     }
 
-    .gridBoxLeft{
+    .gridBoxIcons{
         grid-template-rows: repeat(5, 1fr);
         grid-template-columns: repeat(10, 1fr);
     }

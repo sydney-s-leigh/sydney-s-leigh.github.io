@@ -38,20 +38,14 @@ function shuffleArray(array) {
 }
 
 function populateGridBox(){
-    const gridBoxLeft = document.getElementById("gridBoxLeft");
+    makeIcons("gridBoxLeft");
+    makeIcons("gridBoxRight");
+}
+
+function makeIcons(gridBoxName){
+    const gridBoxLeft = document.getElementById(gridBoxName);
     const randomizedImages = shuffleArray(svgImageNames);
     const imgSrcName = randomizedImages.map(name => "/images/svgs/" + name + ".svg");
-    // document.getElementById("gridBoxLeft").innerHTML = "Y";
-
-    //Grab icons from /images/svgs
-    // const container = document.getElementById('gridBoxLeft');
-    // const newImage = document.createElement('img');
-
-    // newImage.src = '/images/svgs/HTML5.svg';
-    // newImage.style.width = "2.5rem";
-    // newImage.style.height = "2.5rem";
-    // newImage.alt = 'HTML5 SVG Logo';
-    // container.appendChild(newImage);
 
     const divBoxes = 50;
     const rowSize = 10;
@@ -79,12 +73,6 @@ function populateGridBox(){
             // For odd blocks (1, 3, ...), even index = "Div", odd = "Image"
             if (block % 2 === 0) {
                 if (evenOrOddTest){
-                    // const img = document.createAttribute("img");                    
-                    // img.src = imgSrcName[i];
-                    // img.style.width = "2.5rem";
-                    // img.style.height = "2.5rem";
-                    // img.alt = randomizedImages[i];
-                    // div.appendChild(img);
                     div.style.backgroundImage = "url('" + imgSrcName[imageCounter] + "')";
                     div.style.backgroundSize = "contain";
                     div.style.backgroundRepeat = "no-repeat";
@@ -92,18 +80,12 @@ function populateGridBox(){
                     div.style.filter = "grayscale(100%)";
                     imageCounter++;
                 } else {
-                    //div.innerHTML = "Div " + i;
+                    //Populate an empty grid
                 } 
             } else {
                 if (evenOrOddTest){
-                    //div.innerHTML = "Div " + i;
+                    //Populate an empty grid
                 } else {
-                    // const img = document.createAttribute("img");                    
-                    // img.src = imgSrcName[i];
-                    // img.style.width = "2.5rem";
-                    // img.style.height = "2.5rem";
-                    // img.alt = randomizedImages[i];
-                    // div.appendChild(img);
                     div.style.backgroundImage = "url('" + imgSrcName[imageCounter] + "')";
                     div.style.backgroundSize = "contain";
                     div.style.backgroundRepeat = "no-repeat";
@@ -115,8 +97,5 @@ function populateGridBox(){
 
             gridBoxLeft.appendChild(div);
         }
-    }
-    //Create an image for every other box in gridBoxLeft based on number of grid-template-columns/grid-template-rows
-    //that is properly resized
-    
+    }    
 }
