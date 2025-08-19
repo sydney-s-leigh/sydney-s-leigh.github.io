@@ -84,6 +84,7 @@ function populateGridBox(){
                     div.style.backgroundSize = "contain";
                     div.style.backgroundRepeat = "no-repeat";
                     div.style.backgroundPosition = "center";
+                    div.style.filter = "grayscale(100%)";
                     imageCounter++;
                 } else {
                     //div.innerHTML = "Div " + i;
@@ -102,6 +103,7 @@ function populateGridBox(){
                     div.style.backgroundSize = "contain";
                     div.style.backgroundRepeat = "no-repeat";
                     div.style.backgroundPosition = "center";
+                    div.style.filter = "grayscale(100%)";
                     imageCounter++;
                 } 
             }
