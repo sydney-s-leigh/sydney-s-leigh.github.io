@@ -28,7 +28,7 @@ body {
 body {
     background-color: #555555; 
     color: #efefef;
-    font: 16px 'PerfectDOS_VGA', serif;
+    font: 18px 'PerfectDOS_VGA', serif;
 } 
 /*********************** END GLOBALS ****************************/
 
@@ -190,10 +190,11 @@ nav {
 }
 
 .main {
-    display:flex;
+    /* display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    display:block;
     width:100vw;
     margin:0;
     padding:0;
