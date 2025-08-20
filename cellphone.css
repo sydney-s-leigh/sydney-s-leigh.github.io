@@ -68,14 +68,21 @@ svg:hover {
     min-height: 100vh;    
 }
 
-header{
+.header{
     display:flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
+    font-size: 2em;
     background-color: #555555;
     height:4rem;
     padding-right:1rem;
     border-top: 5px solid #656565;
+    text-align: center;
+}
+
+.socialMedia {
+    position:absolute;
+    right:1rem;
 }
 
 nav {
@@ -182,7 +189,17 @@ nav {
 }
 
 .main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.article {
+    margin:1rem;
+    padding:0.5rem;
+    /* border:5px solid #656565; */
+    width:98vw;
 }
 
 .footer {
