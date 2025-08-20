@@ -194,13 +194,24 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width:100vw;
+    margin:0;
+    padding:0;
 }
 
 .article {
-    margin:1rem;
-    padding:0.5rem;
+    margin-top:1rem;
+    padding:0rem;
     /* border:5px solid #656565; */
-    width:98vw;
+}
+
+.article > h1 {    
+    padding:0rem 1rem 0rem 1rem;
+    background-color: #757575;
+}
+
+.article > p {
+    padding:1rem;
 }
 
 .footer {
