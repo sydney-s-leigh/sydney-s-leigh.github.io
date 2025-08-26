@@ -26,15 +26,20 @@ body {
 }
 
 body {
-    background-color: #757575; 
-    color: #cacaca;
+    background-color: #202020; 
+    color: #baffba;
     font: 18px 'PerfectDOS_VGA', serif;
 } 
+
+h1 {
+    color: #82ff82;
+}
+
 /*********************** END GLOBALS ****************************/
 
 /*********************** START LINKS ****************************/
 a:link {
-    color: #cacaca;
+    color: #55ff55;
     text-decoration: none;
 }
 
@@ -43,7 +48,7 @@ a:active {
 }
 
 a:visited {
-    color: #cacaca;
+    color: #55ff55;
 }   
 
 a:hover {
@@ -91,7 +96,7 @@ svg:hover {
 }
 
 #title{
-    color:#FFFFFF;
+    color:#00ff00;
 }
 
 .comments {
@@ -102,7 +107,7 @@ svg:hover {
     margin: 1rem;
     padding: 0.5rem;
     background-color: #353535;
-    border: 1px solid #cacaca;
+    border: 1px solid #00aa00;
     border-radius: 15px;
 }
 
@@ -117,22 +122,23 @@ svg:hover {
     justify-content: center;
     align-items: center;
     font-size: 2em;
-    background-color: #353535;
+    background-color: #004100;
     height:4rem;
     padding-right:1rem;
-    border-top: 5px solid #656565;
+    /* border-top: 5px solid #656565; */
     text-align: center;
 }
 
 .socialMedia {
+    display:none;
     position:absolute;
     right:1rem;
 }
 
 nav {
     background-color: #010101;
-    border-top: 3px solid #cacaca;
-    border-bottom: 3px solid #cacaca;
+    border-top: 3px solid #007100;
+    border-bottom: 3px solid #007100;
     display:flex;
     justify-content: space-evenly;
     align-items: center;
@@ -142,11 +148,11 @@ nav {
 .banner {
     padding:0.25rem;
 
-    background-color: #353535;
+    background-color: #004100;
     display:flex;
     justify-content: space-evenly;
     align-items: center;
-    border-bottom: 5px solid #656565;
+    border-bottom: 5px solid #007100;
 }
 
 .gridBoxIcons {
@@ -193,7 +199,7 @@ nav {
 }
 
 .portraitCutout {
-    border: 3px solid #cacaca;
+    border: 3px solid #007100;
     overflow: hidden;
     /* box-shadow: #656565 0 0 0 3px; */
     border-radius:50%;
@@ -202,7 +208,7 @@ nav {
 .portrait {
     background-image: url("/images/Sydney\ Business\ 2025.jpg");
     background-size: contain;
-    filter:grayscale(35%);
+    /* filter:grayscale(35%); */
 }
 
 .callOrBook {
