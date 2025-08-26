@@ -14,6 +14,29 @@
     font-display: swap;  /* Optimize font loading */
 }
 
+:root {
+    --primary1: #000000;
+    --primary2: #010101;
+    --primary3: #202020;
+    --primary4: #353535;
+    --primary5: #454545;
+    --primary6: #555555;
+    --primary7: #656565;
+    --primary8: #757575;
+    --secondary1: #8a8a8a;
+    --secondary2: #9a9a9a;
+    --secondary3: #aaaaaa;
+    --secondary4: #bababa;
+    --secondary5: #cacaca;
+    --secondary6: #bfbfbf;
+    --secondary7: #efefef;
+    --secondary8: #ffffff;
+    --highlight1: #ffff00;
+    --highlight2: #ffff55;
+    --highlight3: #ffff82;
+    --highlight4: #ffffba;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -26,20 +49,16 @@ body {
 }
 
 body {
-    background-color: #202020; 
-    color: #baffba;
+    background-color: var(--primary8); 
+    color: var(--secondary5);
     font: 18px 'PerfectDOS_VGA', serif;
 } 
-
-h1 {
-    color: #82ff82;
-}
 
 /*********************** END GLOBALS ****************************/
 
 /*********************** START LINKS ****************************/
 a:link {
-    color: #55ff55;
+    color: var(--secondary7);
     text-decoration: none;
 }
 
@@ -48,7 +67,7 @@ a:active {
 }
 
 a:visited {
-    color: #55ff55;
+    color: var(--secondary7);
 }   
 
 a:hover {
@@ -76,8 +95,8 @@ svg:hover {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: #ffff55;
-  color: #010101;
+  background-color: var(--highlight1);
+  color: var(--primary1);
   cursor: pointer;
   padding: 1rem;
   border-radius: 50%;
@@ -96,7 +115,7 @@ svg:hover {
 }
 
 #title{
-    color:#00ff00;
+    color:var(--secondary8);
 }
 
 .comments {
@@ -106,8 +125,8 @@ svg:hover {
 .contentBox {
     margin: 1rem;
     padding: 0.5rem;
-    background-color: #353535;
-    border: 1px solid #00aa00;
+    background-color: var(--primary5);
+    border: 1px solid var(--secondary4);
     border-radius: 15px;
 }
 
@@ -122,7 +141,7 @@ svg:hover {
     justify-content: center;
     align-items: center;
     font-size: 2em;
-    background-color: #004100;
+    background-color: var(--primary3);
     height:4rem;
     padding-right:1rem;
     /* border-top: 5px solid #656565; */
@@ -136,9 +155,9 @@ svg:hover {
 }
 
 nav {
-    background-color: #010101;
-    border-top: 3px solid #007100;
-    border-bottom: 3px solid #007100;
+    background-color: var(--primary1);
+    border-top: 3px solid var(--secondary1);
+    border-bottom: 3px solid var(--secondary1);
     display:flex;
     justify-content: space-evenly;
     align-items: center;
@@ -148,11 +167,11 @@ nav {
 .banner {
     padding:0.25rem;
 
-    background-color: #004100;
+    background-color: var(--primary3);
     display:flex;
     justify-content: space-evenly;
     align-items: center;
-    border-bottom: 5px solid #007100;
+    border-bottom: 5px solid var(--primary5);
 }
 
 .gridBoxIcons {
@@ -199,7 +218,7 @@ nav {
 }
 
 .portraitCutout {
-    border: 3px solid #007100;
+    border: 3px solid var(--secondary1);
     overflow: hidden;
     /* box-shadow: #656565 0 0 0 3px; */
     border-radius:50%;
@@ -260,7 +279,8 @@ nav {
 
 .article > h1 {    
     padding:0rem 1rem 0rem 1rem;
-    background-color: #202020;
+    color: var(--secondary4);
+    background-color: var(--primary4);
 }
 
 .article > p {
@@ -273,8 +293,8 @@ nav {
     align-items: center;
     height:5rem;            
     
-    background-color: #555555;
-    border-top: 5px solid #656565;
+    background-color: var(--primary3);
+    border-top: 5px solid var(--primary5);
 }
 
 /* For phones in portrait mode */
