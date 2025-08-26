@@ -133,7 +133,7 @@ svg:hover {
 }
 
 .header{
-    display:flex;
+    display:none;
     justify-content: center;
     align-items: center;
     background-color: var(--primary3);

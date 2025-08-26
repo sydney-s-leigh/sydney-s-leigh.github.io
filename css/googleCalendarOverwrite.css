@@ -1,9 +1,10 @@
 .qxCTlb {
 
     padding: 15px;
-    color: #061919 !important;
-    border: 5px dotted rgba(255, 238, 0, 0.75);
-    background-color: #41ff00;
+    color: #000000 !important;
+    /* border: 5px dotted rgba(255, 238, 0, 0.75); */
+    border: none;
+    background-color: #ffffff !important;
     border-radius: 20px 20px 20px 20px;
     /* font: bold 30px Georgia, serif; */
     font: bold 30px 'PerfectDOS_VGA', serif;
@@ -20,6 +21,10 @@
     cursor: pointer;
     white-space: break-spaces;
     word-break: break-word */
+}
+
+.qxCTlb:hover {
+    background-color: #aaaaaa !important;
 }
 
 .hur54b {
