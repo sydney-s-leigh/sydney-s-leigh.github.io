@@ -98,13 +98,7 @@ svg:hover {
     width: 100%;
 }
 
-/* #contactMe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-.form {
+.contentBox {
     margin: 1rem;
     padding: 0.5rem;
     background-color: #353535;
