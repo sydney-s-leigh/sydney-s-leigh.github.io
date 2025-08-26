@@ -172,18 +172,52 @@ nav {
 .heroSection{
     padding:1rem;
     background-color: var(--primary3);
-    height:20rem;
     display:flex;
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    font-size:2em;
     text-align: center;
+    font-size:3em;
+}
+
+.themePicker {
+    font-size:0.3em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.themeButton{
+    height:3rem;
+    width:3rem;
+    border-radius: 50%;
+    border: 1px solid var(--secondary1);
+}
+
+.themeBox {
+    padding:0.5em;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--secondary6);
+}
+
+.darkMode{
+    background: linear-gradient(to right, #000000 50%, #ffffff 50%);
+}
+
+.lightMode{
+    background: linear-gradient(to right, #ffffff 50%, #000000 50%);
+}
+
+.vgaGreen {
+    background: linear-gradient(to right, #004100 50%, #00ff00 50%);
 }
 
 .heroSection > h1{
     color:var(--secondary8);
-    font-size: 4em;
+    /* font-size: 4em; */
     text-align: center;
 }
 
@@ -392,7 +426,7 @@ nav {
 /* For computer and tablet screens */
 @media only screen and (min-width:600px) and (min-height:600px){
     nav {
-        font-size: 2.5em;
+        font-size: 3em;
         font-style: bold;
     }
 
