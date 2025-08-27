@@ -231,6 +231,10 @@ nav {
     /* border-bottom: 5px solid var(--primary5); */
 }
 
+.sydneyLeigh {
+    font-size: 0.4em;
+}
+
 .heroSection{
     padding:1rem;
     background-color: var(--primary3);

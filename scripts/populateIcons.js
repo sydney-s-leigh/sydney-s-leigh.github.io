@@ -46,6 +46,7 @@ function makeIcons(gridBoxName){
     const gridBoxLeft = document.getElementById(gridBoxName);
     const randomizedImages = shuffleArray(svgImageNames);
     const imgSrcName = randomizedImages.map(name => "/images/svgs/" + name + ".svg");
+    const savedTheme = localStorage.getItem("theme");
 
     const divBoxes = 50;
     const rowSize = 10;
@@ -77,7 +78,11 @@ function makeIcons(gridBoxName){
                     div.style.backgroundSize = "contain";
                     div.style.backgroundRepeat = "no-repeat";
                     div.style.backgroundPosition = "center";
-                    div.style.filter = "grayscale(100%)";
+                    if(savedTheme == "VGAGreen") {
+                        div.style.filter = "grayscale(100%) hue-rotate(120deg)";
+                    } else {
+                        div.style.filter = "grayscale(100%)";
+                    }                    
                     imageCounter++;
                 } else {
                     //Populate an empty grid
@@ -90,7 +95,11 @@ function makeIcons(gridBoxName){
                     div.style.backgroundSize = "contain";
                     div.style.backgroundRepeat = "no-repeat";
                     div.style.backgroundPosition = "center";
-                    div.style.filter = "grayscale(100%)";
+                    if(savedTheme == "VGAGreen") {
+                        div.style.filter = "grayscale(100%) hue-rotate(120deg)";
+                    } else {
+                        div.style.filter = "grayscale(100%)";
+                    }   
                     imageCounter++;
                 } 
             }
