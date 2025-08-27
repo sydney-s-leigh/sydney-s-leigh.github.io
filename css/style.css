@@ -67,32 +67,36 @@ html[data-theme="light"] {
 }
 
 html[data-theme="VGAGreen"] {
-    /* Background for main */
-    /* --primary8: #8a8a8a; */
-    --primary8: #8a8a8a;
-    --primary7: #9a9a9a;
-    --primary6: #aaaaaa;
-    --primary5: #bababa;
-    /* Header background */
-    /* --primary4: #cacaca; */
-    --primary4: #bfbfbf;
+    --primary1: #000000;
+    --primary2: #010101;
     /* Banner background */
-    /* --primary3: #bfbfbf; */
-    --primary3: #cacaca;
-    --primary2: #efefef;
-    --primary1: #00ff00;
-    --secondary8: #000000;
-    --secondary7: #010101;
-    --secondary6: #202020;
-    --secondary5: #353535;
-    --secondary4: #454545;
-    --secondary3: #555555;
-    --secondary2: #656565;
-    --secondary1: #757575;
-    --highlight1: #ff0000;
-    --highlight2: #aa0000;
-    --highlight3: #71001c;
-    --highlight4: #410010;
+    --primary3: #202020;
+    /* Header background */
+    --primary4: #353535;
+    --primary5: #454545;
+    --primary6: #555555;
+    /* Border for hero section */
+    --primary7: #390071;
+    /* Background color */
+    --primary8: #757575;
+    /* Border color for nav */
+    --secondary1: #8200ff;
+    --secondary2: #9a9a9a;
+    /* Main content borders */
+    --secondary3: #200041;
+    /* Header Text */
+    --secondary4: #00aa00;
+    /* Text color */
+    --secondary5: #82ff82;
+    /* Theme box border */
+    --secondary6: #8200ff;
+    /* Link color */
+    --secondary7: #55ff55;
+    --secondary8: #00ff00;
+    --highlight2: #8200ff;
+    --highlight1: #be00ff;
+    --highlight3: #be82ff;
+    --highlight4: #efbaff;
 }
 
 * {
@@ -180,7 +184,7 @@ svg:hover {
     margin: 1rem;
     padding: 0.5rem;
     background-color: var(--primary5);
-    border: 1px solid var(--secondary4);
+    border: 1px solid var(--secondary3);
     border-radius: 15px;
 }
 
@@ -239,6 +243,12 @@ nav {
     border-bottom: 3px solid var(--primary7);
 }
 
+.heroSection > h1{
+    color:var(--secondary8);
+    /* font-size: 4em; */
+    text-align: center;
+}
+
 .themePicker {
     font-size:0.3em;
     display:flex;
@@ -274,14 +284,8 @@ nav {
     background: linear-gradient(to right, #004100 50%, #00ff00 50%);
 }
 
-/* .bubblegum {
+.bubblegum {
     background: linear-gradient(to right, #004100 50%, #00ff00 50%);
-} */
-
-.heroSection > h1{
-    color:var(--secondary8);
-    /* font-size: 4em; */
-    text-align: center;
 }
 
 .gridBoxIcons {
