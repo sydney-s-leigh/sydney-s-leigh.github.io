@@ -14,30 +14,6 @@
     font-display: swap;  /* Optimize font loading */
 }
 
-:root {
-    color-scheme: light dark;    
-    /* --primary1: #000000;
-    --primary2: #010101;
-    --primary3: #202020;
-    --primary4: #353535;
-    --primary5: #454545;
-    --primary6: #555555;
-    --primary7: #656565;
-    --primary8: #757575;
-    --secondary1: #8a8a8a;
-    --secondary2: #9a9a9a;
-    --secondary3: #aaaaaa;
-    --secondary4: #bababa;
-    --secondary5: #cacaca;
-    --secondary6: #bfbfbf;
-    --secondary7: #efefef;
-    --secondary8: #ffffff;
-    --highlight1: #ffff00;
-    --highlight2: #ffff55;
-    --highlight3: #ffff82;
-    --highlight4: #ffffba; */
-}
-
 html[data-theme="dark"] {
     --primary1: #000000;
     --primary2: #010101;
@@ -62,26 +38,26 @@ html[data-theme="dark"] {
 }
 
 html[data-theme="light"] {
-    --primary1: #8a8a8a;
-    --primary2: #9a9a9a;
-    --primary3: #aaaaaa;
-    --primary4: #bababa;
-    --primary5: #cacaca;
-    --primary6: #bfbfbf;
-    --primary7: #efefef;
-    --primary8: #ffffff;
-    --secondary1: #000000;
-    --secondary2: #010101;
-    --secondary3: #202020;
-    --secondary4: #353535;
-    --secondary5: #454545;
-    --secondary6: #555555;
-    --secondary7: #656565;
-    --secondary8: #757575;
-    --highlight1: #ffff00;
-    --highlight2: #ffff55;
-    --highlight3: #ffff82;
-    --highlight4: #ffffba;
+    --primary8: #8a8a8a;
+    --primary7: #9a9a9a;
+    --primary6: #aaaaaa;
+    --primary5: #bababa;
+    --primary4: #cacaca;
+    --primary3: #bfbfbf;
+    --primary2: #efefef;
+    --primary1: #ffffff;
+    --secondary8: #000000;
+    --secondary7: #010101;
+    --secondary6: #202020;
+    --secondary5: #353535;
+    --secondary4: #454545;
+    --secondary3: #555555;
+    --secondary2: #656565;
+    --secondary1: #757575;
+    --highlight1: #ff0000;
+    --highlight2: #aa0000;
+    --highlight3: #71001c;
+    --highlight4: #410010;
 }
 
 * {
@@ -346,15 +322,14 @@ nav {
 
 .bookButton {
     padding: 15px;
-    color: #061919;
-    border: 5px dotted rgba(255, 238, 0, 0.75);
-    background-color: #de0808;
+    color: var(--primary1) !important;
+    background-color: var(--highlight1) !important;
     border-radius: 20px 20px 20px 20px;
     font: bold 30px Georgia, serif;
 }
 
 .bookButton:active {
-    background-color: #7a0606;
+    background-color: var(--highlight4) !important;
 }
 
 .main {

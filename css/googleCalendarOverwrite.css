@@ -4,7 +4,7 @@
     padding: 15px;
     color: var(--primary1) !important;
     /* border: 5px dotted rgba(255, 238, 0, 0.75); */
-    border: none;
+    border: 2px solid var(--secondary1);
     background-color: var(--highlight1) !important;
     border-radius: 20px 20px 20px 20px;
     /* font: bold 30px Georgia, serif; */
