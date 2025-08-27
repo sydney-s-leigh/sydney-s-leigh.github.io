@@ -3,6 +3,7 @@ const htmlElement = document.documentElement;
 const themeLight = document.getElementById("light");
 const themeDark = document.getElementById("dark");
 const themeVGAGreen = document.getElementById("VGAGreen");
+const themeBubblegumGirlyPop = document.getElementById("bubblegumGirlyPop");
 
 // Get the user's saved theme from localStorage, or default to system preference
 const savedTheme = localStorage.getItem("theme");
@@ -32,6 +33,13 @@ themeDark.addEventListener("click", () => {
 
 themeVGAGreen.addEventListener("click", () => {
   const newTheme = "VGAGreen";
+  // Set the theme and save the new theme to localStorage
+  htmlElement.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+});
+
+themeBubblegumGirlyPop.addEventListener("click", () => {
+  const newTheme = "bubblegumGirlyPop";
   // Set the theme and save the new theme to localStorage
   htmlElement.setAttribute("data-theme", newTheme);
   localStorage.setItem("theme", newTheme);

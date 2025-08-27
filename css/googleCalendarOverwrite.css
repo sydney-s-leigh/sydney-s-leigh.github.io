@@ -2,7 +2,7 @@
 .qxCTlb {
 
     padding: 15px;
-    color: var(--primary1) !important;
+    color: var(--primary2) !important;
     /* border: 5px dotted rgba(255, 238, 0, 0.75); */
     border: 2px solid var(--secondary1);
     background-color: var(--highlight1) !important;

@@ -99,6 +99,43 @@ html[data-theme="VGAGreen"] {
     --highlight4: #efbaff;
 }
 
+html[data-theme="bubblegumGirlyPop"] {
+    /* Nav and Book Button Background */
+    --primary1: #55ffff;
+    /* Book button text */
+    --primary2: #ffff00;
+    /* Banner background */
+    --primary3: #82dfff;
+    /* Header background */
+    --primary4: #005571;
+    /* Content Box Background */
+    --primary5: #005571;
+    --primary6: #555555;
+    /* Border for hero section */
+    --primary7: #390071;
+    /* Background color */
+    --primary8: #82dfff;
+    /* Border color for nav */
+    --secondary1: #8200ff;
+    --secondary2: #9a9a9a;
+    /* Main content borders */
+    --secondary3: #200041;
+    /* Header Text */
+    --secondary4: #efbaff;
+    /* Text color */
+    --secondary5: #df82ff;
+    /* Theme box border */
+    --secondary6: #8200ff;
+    /* Link color */
+    --secondary7: #ff82ff;
+    /* Title and book button color */
+    --secondary8: #ff00ff;
+    --highlight2: #8200ff;
+    --highlight1: #8200ff;
+    --highlight3: #be82ff;
+    --highlight4: #efbaff;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -233,6 +270,7 @@ nav {
 
 .sydneyLeigh {
     font-size: 0.4em;
+    color: var(--secondary8);
 }
 
 .heroSection{
@@ -288,8 +326,8 @@ nav {
     background: linear-gradient(to right, #004100 50%, #00ff00 50%);
 }
 
-.bubblegum {
-    background: linear-gradient(to right, #004100 50%, #00ff00 50%);
+.bubblegumGirlyPop {
+    background: linear-gradient(to right, #00beff 50%, #ff82ff 50%);
 }
 
 .gridBoxIcons {
