@@ -335,11 +335,11 @@ nav {
 
 .bookButtonZ-index {
     position:absolute;
-    background-color: #010101;
-    color:#efefef;
+    background-color: var(--primary1);
+    color: var(--secondary8);
     padding:1rem;
     z-index: 10;
-    border: 3px solid #efefef;
+    border: 3px solid var(--secondary1);
     border-radius:15px;
     text-align: center;
 }
