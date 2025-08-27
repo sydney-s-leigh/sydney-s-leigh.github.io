@@ -38,12 +38,18 @@ html[data-theme="dark"] {
 }
 
 html[data-theme="light"] {
+    /* Background for main */
+    /* --primary8: #8a8a8a; */
     --primary8: #8a8a8a;
     --primary7: #9a9a9a;
     --primary6: #aaaaaa;
     --primary5: #bababa;
-    --primary4: #cacaca;
-    --primary3: #bfbfbf;
+    /* Header background */
+    /* --primary4: #cacaca; */
+    --primary4: #bfbfbf;
+    /* Banner background */
+    /* --primary3: #bfbfbf; */
+    --primary3: #cacaca;
     --primary2: #efefef;
     --primary1: #ffffff;
     --secondary8: #000000;
