@@ -66,6 +66,35 @@ html[data-theme="light"] {
     --highlight4: #410010;
 }
 
+html[data-theme="VGAGreen"] {
+    /* Background for main */
+    /* --primary8: #8a8a8a; */
+    --primary8: #8a8a8a;
+    --primary7: #9a9a9a;
+    --primary6: #aaaaaa;
+    --primary5: #bababa;
+    /* Header background */
+    /* --primary4: #cacaca; */
+    --primary4: #bfbfbf;
+    /* Banner background */
+    /* --primary3: #bfbfbf; */
+    --primary3: #cacaca;
+    --primary2: #efefef;
+    --primary1: #00ff00;
+    --secondary8: #000000;
+    --secondary7: #010101;
+    --secondary6: #202020;
+    --secondary5: #353535;
+    --secondary4: #454545;
+    --secondary3: #555555;
+    --secondary2: #656565;
+    --secondary1: #757575;
+    --highlight1: #ff0000;
+    --highlight2: #aa0000;
+    --highlight3: #71001c;
+    --highlight4: #410010;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
