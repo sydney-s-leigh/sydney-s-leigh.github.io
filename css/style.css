@@ -303,10 +303,15 @@ nav {
 }
 
 .themeButton{
+    margin:0.5rem;
     height:3rem;
     width:3rem;
-    border-radius: 50%;
-    border: 1px solid var(--secondary1);
+    /* border-radius: 50%;
+    border: 1px solid var(--secondary1); */
+    box-shadow:   -5px 0 0 0 var(--secondary1),
+    5px 0 0 0 var(--secondary1),
+    0 -5px 0 0 var(--secondary1),
+    0 5px 0 0 var(--secondary1);
 }
 
 .themeBox {
