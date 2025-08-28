@@ -371,6 +371,10 @@ nav {
     /* border:1px solid green; */
 }
 
+.bannerBox2{
+    transform: scale(0.85);
+}
+
 .bannerBox3{
     display:flex;
     flex-direction: column;
@@ -383,10 +387,14 @@ nav {
 }
 
 .portraitCutout {
-    border: 3px solid var(--secondary1);
+    /* border: 3px solid var(--secondary1); */
     overflow: hidden;
     /* box-shadow: #656565 0 0 0 3px; */
-    border-radius:50%;
+    /* border-radius:50%; */
+    box-shadow:   -5px 0 0 0 var(--secondary1),
+    5px 0 0 0 var(--secondary1),
+    0 -5px 0 0 var(--secondary1),
+    0 5px 0 0 var(--secondary1);
 }
 
 .portrait {
