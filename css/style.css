@@ -105,7 +105,8 @@ html[data-theme="bubblegumGirlyPop"] {
     /* Book button text */
     --primary2: #ffff00;
     /* Banner background */
-    --primary3: #82dfff;
+    --primary3: #00beff;
+    /* --primary3: #82dfff; */
     /* Header background */
     --primary4: #005571;
     /* Content Box Background */
@@ -318,7 +319,8 @@ nav {
     font-size:0.3em;
     display:flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    flex:1;
 }
 
 .themeButton{
