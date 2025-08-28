@@ -508,13 +508,26 @@ nav {
 /* For phones in portrait mode */
 @media only screen and (max-width:600px) {
     nav {
-        font-size: 1em;
+        font-size: 0.75em;
         font-style: bold;
     }
+
 
     .gridBoxIcons{
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sydneyLeigh {
+        font-size:0.25em;
+    }
+
+    .heroSection {
+        font-size:1em;
+    }
+
+    .bookButtonZ-index {
+        transform: scale(0.85);
     }
 
     .bookButtonBoxPC{
@@ -539,13 +552,13 @@ nav {
     }
 
     .bannerBox {
-        height: 20rem;
-        width: 20rem;
+        height: 15rem;
+        width: 15rem;
     }
     
     .portrait {
-        height:20rem;
-        width:20rem;
+        height:15rem;
+        width:15rem;
     }
 
     .footer{
@@ -558,11 +571,6 @@ nav {
     nav {
         font-size: 1.5em;
         font-style: bold;
-    }
-
-    .gridBoxIcons{
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: repeat(3, 1fr);
     }
 
     .bookButtonBoxPhone{
