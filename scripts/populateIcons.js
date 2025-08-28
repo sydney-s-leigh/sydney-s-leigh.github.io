@@ -79,7 +79,7 @@ function makeIcons(gridBoxName){
                     div.style.backgroundRepeat = "no-repeat";
                     div.style.backgroundPosition = "center";
                     if(savedTheme == "VGAGreen") {
-                        div.style.filter = "grayscale(100%) hue-rotate(120deg)";
+                        div.style.filter = "sepia(100%) hue-rotate(75deg)";
                     } else {
                         div.style.filter = "grayscale(100%)";
                     }                    
@@ -96,7 +96,7 @@ function makeIcons(gridBoxName){
                     div.style.backgroundRepeat = "no-repeat";
                     div.style.backgroundPosition = "center";
                     if(savedTheme == "VGAGreen") {
-                        div.style.filter = "grayscale(100%) hue-rotate(120deg)";
+                        div.style.filter = "sepia(100%) hue-rotate(75deg)";
                     } else {
                         div.style.filter = "grayscale(100%)";
                     }   
