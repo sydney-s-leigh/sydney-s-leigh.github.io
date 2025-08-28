@@ -4,11 +4,15 @@
     padding: 15px;
     color: var(--primary2) !important;
     /* border: 5px dotted rgba(255, 238, 0, 0.75); */
-    border: 2px solid var(--secondary1);
+    /* border: 2px solid var(--secondary1); */
     background-color: var(--highlight1) !important;
-    border-radius: 20px 20px 20px 20px;
+    /* border-radius: 20px 20px 20px 20px; */
     /* font: bold 30px Georgia, serif; */
     font: bold 30px 'PerfectDOS_VGA', serif;
+    box-shadow:   -5px 0 0 0 var(--secondary1),
+            5px 0 0 0 var(--secondary1),
+            0 -5px 0 0 var(--secondary1),
+            0 5px 0 0 var(--secondary1);
 /*     
     min-height: 36px;
     padding: 8px 16px;
