@@ -229,6 +229,25 @@ svg:hover {
                  0 5px 0 0 var(--secondary3);
 }
 
+/* .formBox{
+    display:flex;
+    flex-direction: column;
+    gap:0.5rem;
+} */
+
+.inputBox {
+    outline: none; /* Removes the default focus outline */
+    border-color: var(--secondary3);
+    border-width: 0px 0px 1px 0px;
+    background-color: var(--primary5);
+}
+
+.inputBox:focus {
+    outline: none; /* Removes the default focus outline */
+    border-color: var(--secondary3);
+    border-width: 0px 0px 1px 0px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
