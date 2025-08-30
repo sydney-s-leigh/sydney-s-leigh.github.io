@@ -154,6 +154,19 @@ body {
     font: 18px 'PerfectDOS_VGA', serif;
 } 
 
+.boxBorder {
+    box-shadow:   -5px 0 0 0 var(--secondary6),
+    5px 0 0 0 var(--secondary6),
+    0 -5px 0 0 var(--secondary6),
+    0 5px 0 0 var(--secondary6);
+}
+
+.flexBoxCenter {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /*********************** END GLOBALS ****************************/
 
 /*********************** START LINKS ****************************/
