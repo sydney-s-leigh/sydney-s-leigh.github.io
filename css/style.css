@@ -188,7 +188,7 @@ a:hover {
 }
 
 /* https://www.svgrepo.com/collection/social-media-fill-icons/ */
-svg {
+/* svg {
     height: 32px;
     width: 32px;
     fill: #efefef;
@@ -196,7 +196,7 @@ svg {
 
 svg:hover {
     fill: #cacaca;
-}
+} */
 /************************** END LINKS ****************************/
 
 #myBtn {
@@ -219,12 +219,21 @@ svg:hover {
   background-color: #cacaca;
 }
 
+.SVGResume {
+    width:5rem;
+    height:5rem;
+}
+
 .resume {
     margin:1rem;
     padding:1rem;
     background-color: #353535;
     border: 1px solid #cacaca;
     border-radius: 15px;
+}
+
+.resumeBox {
+    width:7.5rem;
 }
 
 .comments {

@@ -15,32 +15,46 @@ htmlElement.setAttribute("data-theme", initialTheme);
 
 // Add a click event listener to the button
 themeLight.addEventListener("click", () => {
-  // let currentTheme = htmlElement.getAttribute("data-theme");
-  // let newTheme = currentTheme === "dark" ? "light" : "dark";
-
-  const newTheme = "light";
-  // Set the theme and save the new theme to localStorage
-  htmlElement.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
+  setTheme("light");
 });
 
 themeDark.addEventListener("click", () => {
-  const newTheme = "dark";
-  // Set the theme and save the new theme to localStorage
-  htmlElement.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
+  setTheme("dark");
 });
 
 themeVGAGreen.addEventListener("click", () => {
-  const newTheme = "VGAGreen";
-  // Set the theme and save the new theme to localStorage
-  htmlElement.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
+  setTheme("VGAGreen");
 });
 
 themeBubblegumGirlyPop.addEventListener("click", () => {
-  const newTheme = "bubblegumGirlyPop";
-  // Set the theme and save the new theme to localStorage
-  htmlElement.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
+  setTheme("bubblegumGirlyPop");
 });
+
+function setTheme(theme){
+  htmlElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+  setGreyscale(theme);
+}
+
+function setGreyscale(theme){
+  const gridBoxes = document.getElementsByClassName("gridBox");
+
+  Array.from(gridBoxes).forEach(element => {
+    switch (theme) {
+      case "light":
+        element.style.filter = "grayscale(100%)";
+        break;
+      case "dark":
+        element.style.filter = "grayscale(100%)";
+        break;
+      case "VGAGreen":
+        element.style.filter = "sepia(100%) hue-rotate(75deg)";
+        break;
+      case "bubblegumGirlyPop":
+        element.style.filter = "grayscale(100%)";
+        break;
+      default:
+        break;
+    }
+  });
+}
