@@ -249,6 +249,15 @@ svg:hover {
     gap:0.5rem;
 } */
 
+.button {
+    height:2.5rem;
+    width:5rem;
+    color: var(--secondary5);
+    border: 1px solid var(--secondary3);
+    background-color: var(--primary5);
+    font: 18px 'PerfectDOS_VGA', serif;
+}
+
 .inputBox {
     outline: none; /* Removes the default focus outline */
     border-color: var(--secondary3);
