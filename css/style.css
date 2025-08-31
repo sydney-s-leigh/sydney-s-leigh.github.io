@@ -58,7 +58,7 @@ html[data-theme="light"] {
     --secondary5: #353535;
     --secondary4: #454545;
     --secondary3: #555555;
-    --secondary2: #656565;
+    --secondary2: #757575;
     --secondary1: #757575;
     --highlight1: #ff0000;
     --highlight2: #aa0000;
@@ -118,7 +118,8 @@ html[data-theme="bubblegumGirlyPop"] {
     --primary8: #82dfff;
     /* Border color for nav */
     --secondary1: #8200ff;
-    --secondary2: #9a9a9a;
+    /* Link hover color */
+    --secondary2: #be82ff;
     /* Main content borders */
     --secondary3: #200041;
     /* Header Text */
@@ -184,7 +185,7 @@ a:visited {
 }   
 
 a:hover {
-    color: #cacaca;
+    color: var(--secondary2);
 }
 
 /* https://www.svgrepo.com/collection/social-media-fill-icons/ */
@@ -232,8 +233,21 @@ svg:hover {
     border-radius: 15px;
 }
 
+/* flex:1; */
 .resumeBox {
-    width:7.5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: var(--primary5);
+    /* border: 1px solid var(--secondary3);
+    border-radius: 15px; */
+      box-shadow:   -5px 0 0 0 var(--secondary3),
+                 5px 0 0 0 var(--secondary3),
+                 0 -5px 0 0 var(--secondary3),
+                 0 5px 0 0 var(--secondary3);
 }
 
 .comments {
@@ -518,6 +532,21 @@ nav {
 
 .article > p {
     padding:1rem;
+}
+
+.contact{
+    display:flex;
+    flex-direction: column;
+}
+
+.contactSVG {
+    height:2.5rem;
+    width:2.5rem;
+    fill: var(--secondary7);
+}
+
+.contactSVG:hover{
+    fill: var(--secondary2);
 }
 
 .resumes {
