@@ -539,6 +539,15 @@ nav {
     flex-direction: column;
 }
 
+.contactItem {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    gap: 1.5rem;
+    font-size: 2em;
+}
+
 .contactSVG {
     height:2.5rem;
     width:2.5rem;
