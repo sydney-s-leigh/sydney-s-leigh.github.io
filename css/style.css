@@ -188,6 +188,14 @@ a:hover {
     color: var(--secondary2);
 }
 
+.highlightLink{
+    color: var(--highlight1) !important;
+}
+
+.highlightLink:hover{
+    color: var(--highlight4) !important;
+}
+
 /* https://www.svgrepo.com/collection/social-media-fill-icons/ */
 /* svg {
     height: 32px;
