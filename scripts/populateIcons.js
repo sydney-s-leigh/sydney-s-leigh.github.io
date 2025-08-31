@@ -26,6 +26,8 @@ const svgImageNames = ["Beastie",
     "W3Schools",
     "Wireshark"];
 
+const savedTheme = localStorage.getItem("theme");
+
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     // Generate a random index between 0 and i (inclusive)
@@ -46,7 +48,6 @@ function makeIcons(gridBoxName){
     const gridBoxLeft = document.getElementById(gridBoxName);
     const randomizedImages = shuffleArray(svgImageNames);
     const imgSrcName = randomizedImages.map(name => "/images/svgs/" + name + ".svg");
-    const savedTheme = localStorage.getItem("theme");
 
     const divBoxes = 50;
     const rowSize = 10;
@@ -74,15 +75,7 @@ function makeIcons(gridBoxName){
             // For odd blocks (1, 3, ...), even index = "Div", odd = "Image"
             if (block % 2 === 0) {
                 if (evenOrOddTest){
-                    div.style.backgroundImage = "url('" + imgSrcName[imageCounter] + "')";
-                    div.style.backgroundSize = "contain";
-                    div.style.backgroundRepeat = "no-repeat";
-                    div.style.backgroundPosition = "center";
-                    if(savedTheme == "VGAGreen") {
-                        div.style.filter = "sepia(100%) hue-rotate(75deg)";
-                    } else {
-                        div.style.filter = "grayscale(100%)";
-                    }                    
+                    setDiv(div, imgSrcName[imageCounter]);
                     imageCounter++;
                 } else {
                     //Populate an empty grid
@@ -90,16 +83,8 @@ function makeIcons(gridBoxName){
             } else {
                 if (evenOrOddTest){
                     //Populate an empty grid
-                } else {
-                    div.style.backgroundImage = "url('" + imgSrcName[imageCounter] + "')";
-                    div.style.backgroundSize = "contain";
-                    div.style.backgroundRepeat = "no-repeat";
-                    div.style.backgroundPosition = "center";
-                    if(savedTheme == "VGAGreen") {
-                        div.style.filter = "sepia(100%) hue-rotate(75deg)";
-                    } else {
-                        div.style.filter = "grayscale(100%)";
-                    }   
+                } else { 
+                    setDiv(div, imgSrcName[imageCounter]);
                     imageCounter++;
                 } 
             }
@@ -107,4 +92,12 @@ function makeIcons(gridBoxName){
             gridBoxLeft.appendChild(div);
         }
     }    
+}
+
+function setDiv(div, name){
+    div.style.backgroundImage = "url('" + name + "')";
+    div.style.backgroundSize = "contain";
+    div.style.backgroundRepeat = "no-repeat";
+    div.style.backgroundPosition = "center";
+    setGreyscale(savedTheme);
 }

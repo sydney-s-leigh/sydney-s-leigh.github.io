@@ -6,7 +6,7 @@ const themeVGAGreen = document.getElementById("VGAGreen");
 const themeBubblegumGirlyPop = document.getElementById("bubblegumGirlyPop");
 
 // Get the user's saved theme from localStorage, or default to system preference
-const savedTheme = localStorage.getItem("theme");
+// const savedTheme = localStorage.getItem("theme");
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
 
@@ -51,7 +51,7 @@ function setGreyscale(theme){
         element.style.filter = "sepia(100%) hue-rotate(75deg)";
         break;
       case "bubblegumGirlyPop":
-        element.style.filter = "grayscale(100%)";
+        element.style.filter = "sepia(100%) hue-rotate(150deg)";
         break;
       default:
         break;
