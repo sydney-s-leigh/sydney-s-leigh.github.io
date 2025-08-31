@@ -9,6 +9,7 @@ const themeBubblegumGirlyPop = document.getElementById("bubblegumGirlyPop");
 // const savedTheme = localStorage.getItem("theme");
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
+const gridBoxes = document.getElementsByClassName("gridBox");
 
 // Apply the initial theme on page load
 htmlElement.setAttribute("data-theme", initialTheme);
@@ -37,9 +38,9 @@ function setTheme(theme){
 }
 
 function setGreyscale(theme){
-  const gridBoxes = document.getElementsByClassName("gridBox");
 
-  Array.from(gridBoxes).forEach(element => {
+  for (var i = 0; i < gridBoxes.length; i++) {
+    var element = gridBoxes[i];
     switch (theme) {
       case "light":
         element.style.filter = "grayscale(100%)";
@@ -56,5 +57,5 @@ function setGreyscale(theme){
       default:
         break;
     }
-  });
+  }
 }

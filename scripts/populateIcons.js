@@ -61,7 +61,7 @@ function makeIcons(gridBoxName){
         //Variable to start on cell 1 or cell 2
         const evenOrOdd = Math.floor(Math.random() * 2);
 
-        for (let i = 0; i < divBoxes; i++) {
+        for (let i = 0; i < divBoxes+2; i++) {
             const div = document.createElement("div");
             div.className = "gridBox";
 
